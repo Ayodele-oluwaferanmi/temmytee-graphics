@@ -17,13 +17,13 @@ export const site = {
     "Creative graphics, compelling visual identities and memorable designs for churches, events, businesses and individuals.",
 
   /**
-   * CONTACT — replace the placeholders below with the real details.
+   * CONTACT — phone and email shown across the site.
    * `whatsapp` must be in international format with no "+" and no spaces.
    */
   contact: {
-    whatsapp: "2348000000000", // ← e.g. 2348012345678
-    whatsappDisplay: "+234 800 000 0000",
-    email: "hello@temmyteegraphics.com", // ← replace with the real inbox
+    whatsapp: "2347011295304",
+    whatsappDisplay: "+234 701 129 5304",
+    email: "isaiahoguntoye430@gmail.com",
     location: "Nigeria · working with clients worldwide",
     availability: "Currently accepting new projects",
   },
@@ -38,7 +38,7 @@ export const site = {
    * Option B (works immediately): leave it empty. The form then composes the
    * full project brief and opens it in WhatsApp, so nothing is silently lost.
    */
-  formEndpoint: "",
+  formEndpoint: "https://formspree.io/f/xljjdekz",
 
   /** Only the profiles that actually exist should stay in this list. */
   socials: [

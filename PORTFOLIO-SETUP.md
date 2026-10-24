@@ -49,9 +49,9 @@ finished client work.
 `src/data/site.ts` → `site.contact`:
 
 ```ts
-whatsapp: "2348000000000",   // international format, no "+", no spaces
-whatsappDisplay: "+234 800 000 0000",
-email: "hello@temmyteegraphics.com",
+whatsapp: "2347011295304",   // international format, no "+", no spaces
+whatsappDisplay: "+234 701 129 5304",
+email: "isaiahoguntoye430@gmail.com",
 location: "...",
 availability: "...",
 ```
@@ -65,9 +65,9 @@ Social links live in `site.socials` — only keep the profiles that really exist
 
 - **Recommended:** create a free form at [Formspree](https://formspree.io),
   [Getform](https://getform.io), [Basin](https://usebasin.com) or
-  [Web3Forms](https://web3forms.com) and paste the endpoint, e.g.
-  `"https://formspree.io/f/abcdwxyz"`. Submissions are then delivered to that
-  inbox, with real success/error handling.
+  [Web3Forms](https://web3forms.com) and paste the endpoint into `formEndpoint`.
+  The current Formspree endpoint is already configured. Submissions are delivered
+  to its connected inbox, with success/error handling.
 - **Left empty:** the form validates as normal and then opens WhatsApp with the
   complete, formatted project brief ready to send — so no enquiry is ever lost.
   The site tells the visitor exactly what happened; it never pretends to send.

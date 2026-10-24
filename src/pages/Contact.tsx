@@ -190,7 +190,7 @@ export function Contact() {
                     value={fields.whatsapp}
                     onChange={set("whatsapp")}
                     autoComplete="tel"
-                    placeholder="+234 800 000 0000"
+                    placeholder="+234 701 234 5678"
                     className={inputClass()}
                   />
                 </Field>
