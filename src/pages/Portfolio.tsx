@@ -37,8 +37,9 @@ export function Portfolio({ initialCategory }: { initialCategory?: string }) {
           </div>
           <div className="lg:col-span-5 lg:pl-10">
             <p className="rounded-[12px] border border-dashed border-line bg-paper px-5 py-4 text-[0.8125rem] leading-relaxed text-muted">
-              <span className="font-medium text-ink">Adding artwork:</span> each project below is a ready-made slot.
-              Paste an image URL into its <code className="font-mono text-brand-500">image</code> field in{" "}
+              <span className="font-medium text-ink">Adding artwork:</span> each project below uses an image from its
+              matching folder under <code className="font-mono text-brand-500">public/images</code>. Set its{" "}
+              <code className="font-mono text-brand-500">image</code> path in{" "}
               <code className="font-mono text-brand-500">src/data/projects.ts</code> and the real design replaces the
               placeholder everywhere — gallery, category card and lightbox.
             </p>
@@ -123,34 +124,39 @@ export function Portfolio({ initialCategory }: { initialCategory?: string }) {
         <div className="mt-20 border-t border-line pt-12">
           <h2 className="eyebrow text-muted">Jump to another category</h2>
           <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-5">
-            {categories.map((cat, i) => (
-              <button
-                key={cat.id}
-                onClick={() => setFilter(cat.id)}
-                className={cn(
-                  "group overflow-hidden rounded-[12px] border text-left transition-all duration-300",
-                  active === cat.id ? "border-brand-500" : "border-line hover:border-ink/30",
-                )}
-              >
-                <div className="zoom-media overflow-hidden">
-                  <ArtworkFrame
-                    ratio={4 / 3}
-                    tone={cat.tone}
-                    variant={cat.variant}
-                    title={cat.short}
-                    index={i}
-                    quiet
-                    plain
-                  />
-                </div>
-                <span className="flex items-center justify-between gap-2 px-4 py-3 text-[0.8125rem] font-medium">
-                  {cat.short}
-                  <span className="font-mono text-[0.6875rem] text-muted">
-                    {String(countByCategory(cat.id)).padStart(2, "0")}
+            {categories.map((cat, i) => {
+              const sample = projectsByCategory(cat.id)[0];
+              return (
+                <button
+                  key={cat.id}
+                  onClick={() => setFilter(cat.id)}
+                  className={cn(
+                    "group overflow-hidden rounded-[12px] border text-left transition-all duration-300",
+                    active === cat.id ? "border-brand-500" : "border-line hover:border-ink/30",
+                  )}
+                >
+                  <div className="zoom-media overflow-hidden">
+                    <ArtworkFrame
+                      ratio={4 / 3}
+                      tone={cat.tone}
+                      variant={cat.variant}
+                      title={cat.short}
+                      index={i}
+                      image={sample?.image}
+                      alt={`${cat.title} portfolio`}
+                      quiet
+                      plain
+                    />
+                  </div>
+                  <span className="flex items-center justify-between gap-2 px-4 py-3 text-[0.8125rem] font-medium">
+                    {cat.short}
+                    <span className="font-mono text-[0.6875rem] text-muted">
+                      {String(countByCategory(cat.id)).padStart(2, "0")}
+                    </span>
                   </span>
-                </span>
-              </button>
-            ))}
+                </button>
+              );
+            })}
           </div>
         </div>
       </section>

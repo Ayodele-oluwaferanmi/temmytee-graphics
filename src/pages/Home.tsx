@@ -69,7 +69,7 @@ export function Home() {
               </div>
               <div>
                 <dt className="eyebrow text-white/40">Portfolio</dt>
-                <dd className="mt-2 text-[0.9375rem] text-white/85">{countByCategory("all")} project slots</dd>
+                <dd className="mt-2 text-[0.9375rem] text-white/85">{countByCategory("all")} portfolio projects</dd>
               </div>
             </dl>
           </div>

@@ -1,8 +1,7 @@
 # Temmy Tee Graphics — Portfolio Site
 
-A fast, single-page React + Vite + Tailwind site built around the Temmy Tee Graphics
-identity (electric blue `#0B47F0`, white, charcoal) with the original geometric
-"tg" monogram recreated as vector art so it stays sharp at any size.
+A fast, single-page React + Vite + Tailwind site using the supplied Temmy Tee
+Graphics logo artwork and matching blue, white and charcoal brand palette.
 
 ---
 
@@ -11,16 +10,15 @@ identity (electric blue `#0B47F0`, white, charcoal) with the original geometric
 Every project in the gallery is **structured data**. Nothing needs to be
 redesigned to add, remove or re-order work.
 
-1. Put your exported design in `public/artwork/` (create the folder), e.g.
-   `public/artwork/sunday-service-flyer.jpg`, or host it anywhere that gives you a
-   direct image URL (Cloudinary, S3, a Drive/Dropbox *direct* link).
+1. Put your exported design in the matching folder under `public/images/`, e.g.
+   `public/images/church/sunday-service-flyer.jpg`, or host it at a direct image URL.
 2. Open `src/data/projects.ts` and find the project you want to update:
 
 ```ts
 slot("church-sunday-flyer", "Sunday Service Flyer", "church", 4 / 5, "Portrait flyer · 4:5", "brand", 0, {
   featured: true,
-  image: "/artwork/sunday-service-flyer.jpg",   // ← add this
-  gallery: ["/artwork/sunday-service-flyer-2.jpg"], // optional extra views
+  image: "/images/church/sunday-service-flyer.jpg",
+  gallery: ["/images/church/sunday-service-flyer-2.jpg"], // optional extra views
   year: "2025",
   client: "Client name (optional)",
   description: "One or two sentences about the design.",

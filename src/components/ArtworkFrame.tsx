@@ -229,7 +229,7 @@ export function ArtworkFrame({
   return (
     <div
       className={cn("zoom-media relative overflow-hidden bg-paper", className)}
-      style={{ aspectRatio: String(ratio) }}
+      style={{ aspectRatio: String(ratio), backgroundColor: image ? palettes[tone].bg : undefined }}
     >
       {image ? (
         <img
