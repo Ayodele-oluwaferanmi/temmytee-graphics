@@ -181,7 +181,7 @@ export const projects: Project[] = [
     deliverables: ["Portrait flyer", "Instagram square crop", "Story format"],
     also: ["flyer", "social"],
   }),
-  slot("church-service-square", "Sunday Service Social Post", "church", 1, "Square social post · 1:1", "ink", 3, {
+  slot("church-service-square", "Sunday Service Flyer", "church", 4 / 5, "Portrait flyer · 4:5", "ink", 3, {
     image: "/images/church/20260512_140311.jpg",
     also: ["social"],
   }),
@@ -216,7 +216,7 @@ export const projects: Project[] = [
   slot("birthday-invitation", "Birthday Invitation Card", "birthday", 4 / 5, "Portrait invitation · 4:5", "paper", 3, {
     image: "/images/birthday/20260918_074620.jpg",
   }),
-  slot("birthday-social-graphic", "Birthday Social Graphic", "birthday", 1, "Square social post · 1:1", "brand", 4, {
+  slot("birthday-social-graphic", "Birthday Social Graphic", "birthday", 4 / 5, "Portrait design · 4:5", "brand", 4, {
     image: "/images/birthday/20260922_170019.jpg",
     also: ["social"],
   }),
@@ -242,11 +242,11 @@ export const projects: Project[] = [
   }),
 
   /* ----------------------------------------------------------- EVENT */
-  slot("event-conference-flyer", "Conference Flyer", "event", 4 / 5, "Portrait flyer · 4:5", "brand", 3, {
+  slot("event-conference-flyer", "Conference Flyer", "event", 5 / 6, "Portrait flyer · 5:6", "brand", 3, {
     image: "/images/business-events/20260908_122426.jpg",
     also: ["flyer"],
   }),
-  slot("event-concert-poster", "Concert & Show Poster", "event", 2 / 3, "Poster · 2:3", "ink", 0, {
+  slot("event-concert-poster", "Concert & Show Poster", "event", 5 / 6, "Poster · 5:6", "ink", 0, {
     image: "/images/business-events/20251204_115028.png",
     featured: true,
     also: ["flyer"],
@@ -254,13 +254,13 @@ export const projects: Project[] = [
   slot("event-corporate-banner", "Corporate Event Banner", "event", 4 / 5, "Portrait event graphic · 4:5", "slate", 4, {
     image: "/images/business-events/20260513_193331.png",
   }),
-  slot("event-product-launch", "Product Launch Flyer", "event", 4 / 5, "Portrait flyer · 4:5", "brand", 5, {
+  slot("event-product-launch", "Product Launch Flyer", "event", 5 / 6, "Portrait flyer · 5:6", "brand", 5, {
     image: "/images/business-events/20260911_112817.jpg",
     also: ["flyer", "campaign"],
   }),
 
   /* ---------------------------------------------------- SOCIAL MEDIA */
-  slot("social-instagram-post", "Instagram Post", "social", 1, "Instagram post · 1:1", "ink", 4, {
+  slot("social-instagram-post", "Instagram Post", "social", 4 / 5, "Social post · 4:5", "ink", 4, {
     image: "/images/social%20media%20designs/20260721_225315.jpg",
     featured: true,
     description:
@@ -297,7 +297,7 @@ export const projects: Project[] = [
   }),
 
   /* ----------------------------------------------------------- FLYER */
-  slot("flyer-business-promo", "Business Promotional Flyer", "flyer", 4 / 5, "Portrait flyer · 4:5", "brand", 4, {
+  slot("flyer-business-promo", "Business Promotional Flyer", "flyer", 1, "Square promo · 1:1", "brand", 4, {
     image: "/images/business-events/20250806_225505.jpg",
     also: ["event"],
   }),
@@ -313,7 +313,7 @@ export const projects: Project[] = [
   }),
 
   /* ----------------------------------------------------------- BRAND */
-  slot("brand-identity-presentation", "Brand Identity Presentation", "brand", 4 / 3, "Presentation · 4:3", "ink", 0, {
+  slot("brand-identity-presentation", "Brand Identity Presentation", "brand", 4 / 5, "Brand presentation · 4:5", "ink", 0, {
     image: "/images/logo-brand%20identity/20260920_210718.png",
     featured: true,
     description:
@@ -328,7 +328,7 @@ export const projects: Project[] = [
   }),
 
   /* -------------------------------------------------------- CAMPAIGN */
-  slot("campaign-key-visual", "Campaign Key Visual", "campaign", 1, "Key visual · 1:1", "brand", 2, {
+  slot("campaign-key-visual", "Campaign Key Visual", "campaign", 4 / 5, "Key visual · 4:5", "brand", 2, {
     image: "/images/social%20media%20designs/345218%20(1).jpeg",
     also: ["social"],
   }),

@@ -119,8 +119,7 @@ export function ProjectDetail({ id }: { id?: string }) {
           <div className="md:col-span-7">
             <h2 className="eyebrow text-muted">About this project</h2>
             <p className="mt-5 text-[1.0625rem] leading-relaxed text-ink/85">
-              {project.description ??
-                "[ Project description — replace this slot's copy in src/data/projects.ts with the real brief, approach and outcome for this design. ]"}
+              {project.description ?? `An artwork from the ${category?.title.toLowerCase() ?? "design"} collection.`}
             </p>
 
             {project.objective && (
@@ -133,20 +132,18 @@ export function ProjectDetail({ id }: { id?: string }) {
 
           <div className="md:col-span-5 md:pl-10">
             <div className="rounded-[14px] border border-line bg-white p-7">
-              <h2 className="eyebrow text-muted">Deliverables</h2>
-              {project.deliverables?.length ? (
-                <ul className="mt-5 space-y-3">
-                  {project.deliverables.map((d) => (
-                    <li key={d} className="flex items-start gap-3 text-[0.9375rem] text-ink/85">
-                      <span className="mt-[7px] h-1.5 w-1.5 shrink-0 rounded-full bg-brand-500" />
-                      {d}
-                    </li>
-                  ))}
-                </ul>
-              ) : (
-                <p className="mt-4 text-[0.9375rem] text-muted">
-                  [ Add the deliverables for this project in src/data/projects.ts ]
-                </p>
+              {project.deliverables?.length && (
+                <>
+                  <h2 className="eyebrow text-muted">Deliverables</h2>
+                  <ul className="mt-5 space-y-3">
+                    {project.deliverables.map((d) => (
+                      <li key={d} className="flex items-start gap-3 text-[0.9375rem] text-ink/85">
+                        <span className="mt-[7px] h-1.5 w-1.5 shrink-0 rounded-full bg-brand-500" />
+                        {d}
+                      </li>
+                    ))}
+                  </ul>
+                </>
               )}
 
               <a href={`#/contact?service=${enquiryService}`} className="btn btn-primary mt-8 w-full">
